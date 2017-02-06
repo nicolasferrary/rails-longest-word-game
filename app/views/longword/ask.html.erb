@@ -1,0 +1,18 @@
+<div class='text-center'>
+  <h1>Welcome to the longest word game !</h1>
+  <p>Here are the letters the Gods decided to give you. Good luck.</p>
+  <p> <%= @grid %></p>
+</div>
+
+<div id = 'form' class='text-center' >
+
+<form action="/display" method="get" >
+  <label for="question" >What's your longest word?</label>
+  <input type="text" id="question" name="word" placeholder="thisisaverylongword">
+  <input type="submit" value="Go on!" class="btn btn-primary">
+  <input type="hidden" name="grid" value="<%= @grid.join %>">
+  <input type="hidden" name="start" value="<%= @start_time%>">
+
+</form>
+
+</div>
